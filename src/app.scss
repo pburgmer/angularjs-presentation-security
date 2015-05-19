@@ -1,0 +1,126 @@
+// ****************************************************************************************************
+// general
+// ****************************************************************************************************
+
+// Core variables and mixins
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap//variables";
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// Reset
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap/print";
+
+// Core CSS
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap/type";
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap/code";
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+// Utility classes
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "twbs-bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+// ****************************************************************************************************
+// w11k-slides config
+// ****************************************************************************************************
+
+$theCodeCampus_orange: #ed5502;
+@import "w11k-slides/dist/variables";
+
+$w11k-slides-title-top-background: white;
+$w11k-slides-title-separator-color: darken($w11k-slides-color-1, 8%);
+$w11k-slides-title-bottom-text-color: white;
+$w11k-slides-title-bottom-background: $w11k-slides-color-1;
+
+$w11k-cornerRibbon-distance: 5em;
+
+$w11k-slides-slide-regular-header-logo: url("assets/images/AngularJS-Shield.png");
+
+@import "w11k-slides/dist/w11k-slides";
+
+.slides.export {
+  font-size: 10px;
+
+  .img-responsive {
+    max-width: 10cm;
+    max-height: 10cm;
+  }
+}
+
+.slides.screen .slide.centered {
+  padding: 2em 3em;
+}
+
+.slide {
+  h1 {
+    color: $w11k-slides-color-2;
+  }
+
+  a[href^="http"] {
+    text-decoration: underline;
+  }
+
+  img + ul, pre + ul {
+    margin-top: 1em;
+  }
+}
+
+pre.prettyprint.linenums ol.linenums>li {
+  white-space: pre-wrap;
+}
+
+.img-responsive.centered {
+  margin: 0 auto;
+}
+
+.slides .slide blockquote {
+  font-size: 1.5em;
+  margin-left: 0.1em;
+}
+
+.slides .slide.centered .header .pre {
+  text-transform: none;
+}
+
+// ****************************************************************************************************
+// slides content
+// ****************************************************************************************************
+
+.slides .slide ul.list-unstyled {
+  > li {
+    margin-left: 0.5em;
+
+    &:before {
+      content: ''
+    }
+  }
+
+}
+
+.slide.title {
+  .logo img {
+    margin: 0 auto 0.5em;
+  }
+
+  h1, h1 small {
+    color: $w11k-slides-title-bottom-text-color;
+  }
+
+  div.logo img {
+    max-width: 100%;
+  }
+}
+
+.slide.overview {
+
+}
+
+.slide.end {
+  @include vcenter;
+
+  color: $w11k-slides-color-1;
+  a, a:visited {
+    color: $w11k-slides-color-1;
+  }
+}

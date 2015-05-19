@@ -1,0 +1,26 @@
+{
+  "author": "w11k GmbH / TheCodeCampus",
+  "name": "angularjs-presentation-security",
+  "version": "1.0.0",
+  "homepage": "http://www.w11k.de",
+  "description": "w11k TheCodeCampus AngularJS Security",
+
+  "repository": {
+    "type": "git",
+    "url": "https://git.assembla.com/angularjs.presentation-security.git"
+  },
+
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "fabs": "0.10.0",
+    "lodash": "2.4.1",
+    "pdfcrowd": "1.1.1",
+    "grunt-git": "0.3.4"
+  },
+
+  "engines": {
+    "node": ">=0.10.21"
+  }
+
+}
