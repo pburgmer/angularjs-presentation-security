@@ -64,6 +64,23 @@ $w11k-slides-slide-regular-header-logo: url("assets/images/AngularJS-Shield.png"
   img + ul, pre + ul {
     margin-top: 1em;
   }
+
+
+}
+
+.slides.screen .slide {
+  .source {
+    font-size: 0.7em;
+    margin-left: 2em;
+
+    &, & a {
+      color: lighten($gray-base, 70%);
+    }
+  }
+
+  li.highlight {
+    color: $theCodeCampus_orange;
+  }
 }
 
 pre.prettyprint.linenums ol.linenums>li {

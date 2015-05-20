@@ -1,0 +1,30 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Berechtigungen verwalten
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul>
+      <li>Berechtigungen über Rollen verwalten</li>
+      <li>Bereiche mit Rollen versehen</li>
+      <li>Im UI per Directive
+<pre w11k-pretty-print lang="html">
+&lt;li match-route=&quot;/admin.*&quot; user-role-required=&quot;'ADMIN'&quot;&gt;
+  &lt;a href=&quot;#!/admin/overview&quot;&gt;Admin&lt;/a&gt;
+&lt;/li&gt;
+</pre>
+      </li>
+      <li>An Route / State per <code>resolve</code>
+<pre w11k-pretty-print lang="js">
+module.config(function($stateProvider, ResolveFunctions) {
+  $stateProvider.state('admin', {
+    url: '/admin', templateUrl: 'route/admin/admin.html', controller: 'AdminCtrl',
+    resolve: { authorized: ResolveFunctions.userRolesRequired('ADMIN') }
+  });
+});
+</pre>
+      </li>
+    </ul>
+
+  </div>
+</div>

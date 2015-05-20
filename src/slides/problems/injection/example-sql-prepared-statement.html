@@ -1,0 +1,15 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Beispiel: SQL
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+<pre w11k-pretty-print lang="java" title="Sicherer Java Code um SQL Abfrage zusammen zu bauen">
+PreparedStatement pstmt = connection.prepareStatement("SELECT * FROM users WHERE id = ?");
+pstmt.setInt(1, request.getParameter("id"));
+ResultSet rset = pstmt.executeQuery();
+</pre>
+
+  </div>
+</div>

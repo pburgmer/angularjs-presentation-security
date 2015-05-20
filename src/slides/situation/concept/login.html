@@ -1,0 +1,27 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Login
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul>
+      <li>Vorgelagert als extra Seite
+        <ul>
+          <li>Anwendung nur mit gültigem Login aufrufbar</li>
+          <li>Nicht eingelogt: HTTP-Redirect auf Login</li>
+          <li>Eingelogt: HTTP-Redirect auf Anwendung</li>
+        </ul>
+        <ul>
+          <li>Weniger Angriffsfläche: Nicht jeder sieht die Anwendung</li>
+          <li>Schnelles Laden der ersten Seite</li>
+        </ul>
+      </li>
+      <li>Login als Route in Anwendung
+        <ul>
+          <li>Einfacheres Handling</li>
+          <li>Kein Zusätzlicher Request für Benutzer-Daten notwendig</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Beispiel: SQL
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+<pre w11k-pretty-print lang="java" title="Java Code um SQL Abfrage zusammen zu bauen">
+statement = "SELECT * FROM users WHERE id = " + request.getParameter("id") + ";"
+</pre>
+
+<pre w11k-pretty-print title="URL-Aufruf des Angreifers">
+http://example.com/user?id=42;UPDATE+USER+SET+TYPE="admin"+WHERE+ID=23;--
+</pre>
+
+<pre w11k-pretty-print lang="sql" title="Ausgeführtes SQL">
+SELECT * FROM users WHERE id = 42; UPDATE USER SET TYPE="admin" WHERE ID=23;--;
+</pre>
+
+  </div>
+</div>

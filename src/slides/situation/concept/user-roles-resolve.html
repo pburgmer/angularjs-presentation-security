@@ -1,0 +1,19 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Berechtigungen verwalten
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+<pre w11k-pretty-print lang="js">
+angular.module('app').constant('ResolveFunctions', {
+  userRolesRequired: function (roles) {
+    return /* @ngInject */ function (UserService) {
+      return UserService.hasRoles(roles);
+    };
+  }
+});
+</pre>
+
+  </div>
+</div>
