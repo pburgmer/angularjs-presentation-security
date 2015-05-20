@@ -44,6 +44,7 @@ module.exports = {
     files: {
       js: [
         'angular/angular.js',
+        'angular-sanitize/angular-sanitize.js',
         'google-code-prettify/src/prettify.js',
         'w11k-slides/dist/w11k-slides.js',
         'w11k-slides/dist/w11k-slides.tpl.js'

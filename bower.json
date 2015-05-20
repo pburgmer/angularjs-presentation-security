@@ -2,6 +2,7 @@
   "name": "angularjs-presentation-security",
   "devDependencies": {
     "angular": "1.2.28",
+    "angular-sanitize": "1.2.28",
     "twbs-bootstrap-sass": "3.3.2",
     "w11k-slides": "0.10.3"
   }

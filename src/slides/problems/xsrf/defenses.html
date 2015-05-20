@@ -1,0 +1,16 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Gegenmaßnahmen
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul>
+      <li>Login schickt Session-ID als Cookie mit <code>httpOnly</code> und <code>secure</code></li>
+      <li>Login antwortet mit zusätzliches Token im Header (<code>X-XSRF-Token</code>)</li>
+      <li>Token kann nur vom eigenen JS Code aus abgegriffen werden, der den Request gestartet hat</li>
+      <li>Token muss danach vom eigenen Code explizit als Header mitgesendet werden</li>
+      <li>Server vergleicht mitgesendetes Token mit erwartetem</li>
+    </ul>
+
+  </div>
+</div>

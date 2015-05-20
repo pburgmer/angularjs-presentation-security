@@ -3,7 +3,8 @@
 angular.module('app', [
   'app.templates',
   'w11k.slides',
-  'w11k.slides.template'
+  'w11k.slides.template',
+  'ngSanitize'
 ]);
 
 angular.module('app').config (function (slidesConfig) {
@@ -11,14 +12,16 @@ angular.module('app').config (function (slidesConfig) {
     'title',
 
     'overview',
+    'about-me',
 
     'situation/architecture',
     'situation/technologies',
-    'situation/concept/overview',
-    'situation/concept/login',
-    'situation/concept/user-roles',
-    'situation/concept/user-roles-resolve',
-    'situation/concept/user-roles-service',
+
+    'concept/overview',
+    'concept/login',
+    'concept/user-roles',
+    'concept/user-roles-resolve',
+    'concept/user-roles-service',
 
     'problems/top10',
     'problems/owasp',
@@ -32,12 +35,25 @@ angular.module('app').config (function (slidesConfig) {
     'problems/injection/defenses',
     'problems/injection/example-sql-prepared-statement',
 
-
     'problems/session/title',
+    'problems/session/description',
+    'problems/session/examples',
+    'problems/session/defenses',
+    'problems/session/stateless-backend',
+    'problems/session/stateful-session-id',
 
     'problems/xss/title',
+    'problems/xss/example',
+    'problems/xss/description',
+    'problems/xss/defenses',
+    'problems/xss/angularjs',
+    'problems/xss/angularjs-example',
 
     'problems/xsrf/title',
+    'problems/xsrf/example',
+    'problems/xsrf/description',
+    'problems/xsrf/defenses',
+    'problems/xsrf/angularjs',
 
     'end'
   ];
@@ -49,5 +65,11 @@ angular.module('app').config (function (slidesConfig) {
     'regular': '@@cacheBustingDir/masters/regular.html',
     'section-title': '@@cacheBustingDir/masters/section-title.html',
     'section-overview': '@@cacheBustingDir/masters/section-overview.html'
+  };
+});
+
+angular.module('app').controller('HtmlInjectCtrl', function ($scope, $sce) {
+  $scope.handleInsecureInput = function () {
+    $scope.trustedHtml = $sce.trustAsHtml($scope.searchTerm);
   };
 });

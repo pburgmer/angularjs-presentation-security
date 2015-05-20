@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script type="text/javascript" src="jquery-2.1.4.js"></script>
+    <script type="text/javascript">
+      function handleInput() {
+        var source = $('#insecure-input');
+        var text = source.val();
+        var target = $('#insecure-output');
+        target.append(text);
+      }
+    </script>
+  </head>
+  <body>
+  <input type="text" id="insecure-input"/>
+  <button onclick="handleInput()">Test</button>
+  <div id="insecure-output"></div>
+  </body>
+</html>

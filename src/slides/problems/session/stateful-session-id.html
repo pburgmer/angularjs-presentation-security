@@ -1,0 +1,29 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Stateful Session-ID
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul>
+      <li>Session-ID ist kein Random oder Hash</li>
+      <li>Session-ID enthält Zustand
+        <ul>
+          <li>User-ID</li>
+          <li>Login-Timestamp</li>
+          <li>XSRF-Token?</li>
+          <li>Base64 encoded</li>
+        </ul>
+      </li>
+      <li>Session-ID wird gegen Manipulation und Nachahmung geschützt
+        <ul>
+          <li>Verschlüsselung</li>
+          <li>Signierung</li>
+          <li>Message Authentication Code (z.B. HMAC)</li>
+          <li>Nur auf dem Server bekannt</li>
+        </ul>
+      </li>
+
+    </ul>
+
+  </div>
+</div>
