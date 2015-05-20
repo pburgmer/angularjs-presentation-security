@@ -28,14 +28,16 @@
 $theCodeCampus_orange: #ed5502;
 @import "w11k-slides/dist/variables";
 
-$w11k-slides-title-top-background: white;
+$w11k-slides-color-1: #2D5352;
+$w11k-slides-color-3: #AD6A6C;
+
+$w11k-slides-title-top-background: $w11k-slides-color-1;
+$w11k-slides-title-top-text-color: white;
 $w11k-slides-title-separator-color: darken($w11k-slides-color-1, 8%);
-$w11k-slides-title-bottom-text-color: white;
-$w11k-slides-title-bottom-background: $w11k-slides-color-1;
+$w11k-slides-title-bottom-text-color: $w11k-slides-color-1;
+$w11k-slides-title-bottom-background: white;
 
 $w11k-cornerRibbon-distance: 5em;
-
-$w11k-slides-slide-regular-header-logo: url("assets/images/AngularJS-Shield.png");
 
 @import "w11k-slides/dist/w11k-slides";
 
@@ -79,7 +81,7 @@ $w11k-slides-slide-regular-header-logo: url("assets/images/AngularJS-Shield.png"
   }
 
   li.highlight {
-    color: $theCodeCampus_orange;
+    color: $w11k-slides-color-3;
   }
 }
 
