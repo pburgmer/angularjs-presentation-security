@@ -55,7 +55,8 @@ angular.module('app').config (function (slidesConfig) {
     'problems/xsrf/defenses',
     'problems/xsrf/angularjs',
 
-    'end'
+    'end',
+    'verlosung'
   ];
 
   slidesConfig.slideTemplatePrefix= '@@cacheBustingDir/slides/';
