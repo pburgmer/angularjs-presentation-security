@@ -10,6 +10,12 @@
     "url": "https://git.assembla.com/angularjs.presentation-security.git"
   },
 
+  "scripts": {
+    "postinstall": "bower install",
+    "dev": "grunt dev",
+    "dist": "grunt dist"
+  },
+
   "dependencies": {},
   "devDependencies": {
     "grunt": "0.4.5",
