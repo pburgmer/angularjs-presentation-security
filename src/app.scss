@@ -25,13 +25,18 @@
 // w11k-slides config
 // ****************************************************************************************************
 
-$theCodeCampus_orange: #ed5502;
-@import "w11k-slides/dist/variables";
+$herbstcampus_red: lighten(#7f1b34, 2%);
+$herbstcampus_dark: #6b6150;
+$herbstcampus_light: #b7b2a6;
 
+$w11k-slides-color-1: $herbstcampus_red;
+$w11k-slides-color-2: $herbstcampus_dark;
+
+$w11k-slides-title-top-text-color: $herbstcampus_red;
 $w11k-slides-title-top-background: white;
-$w11k-slides-title-separator-color: darken($w11k-slides-color-1, 8%);
-$w11k-slides-title-bottom-text-color: white;
-$w11k-slides-title-bottom-background: $w11k-slides-color-1;
+$w11k-slides-title-separator-color: $herbstcampus_dark;
+$w11k-slides-title-bottom-text-color: $herbstcampus_red;
+$w11k-slides-title-bottom-background: $herbstcampus_light;
 
 $w11k-cornerRibbon-distance: 5em;
 
@@ -116,17 +121,59 @@ pre.prettyprint.linenums ol.linenums>li {
 }
 
 .slide.title {
+
+  overflow: hidden;
+  div.margin-top, div.margin-bottom {
+    position: relative;
+    height: 10%;
+    background-color: $herbstcampus_dark;
+  }
+
+  div.margin-bottom {
+    height: 20%;
+  }
+
+  div.top {
+    height: 20%;
+
+    .content {
+      top: 50%;
+      @include transform(translateY(-45%));
+    }
+  }
+
+  div.bottom {
+    height: 60%;
+    border-top-width: 0.2em;
+  }
+
   .logo img {
     margin: 0 auto 0.5em;
   }
 
-  h1, h1 small {
+  h1 {
+    color: $w11k-slides-title-bottom-text-color;
+    font-size: 2em;
+  }
+
+  h1 small {
     color: $w11k-slides-title-bottom-text-color;
   }
 
-  div.logo img {
-    max-width: 100%;
+  h2 {
+    color: $herbstcampus_dark;
+    font-size: 1.3em;
+    font-weight: normal;
+
+    small {
+      color: $herbstcampus_dark;
+    }
+
+    &:after {
+      display: none;
+    }
   }
+
 }
 
 .slide.end {
