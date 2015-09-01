@@ -6,14 +6,18 @@
   <div w11k-slide-part-source="content">
     <ul>
       <li>HTTP-Interceptor Konzept</li>
-      <li>Interceptor für X-XSRF-Token</li>
-      <li>Speichert Token Arbeitsspeicher</li>
-      <li>Sendet Token bei jedem Request zur gleichen Domain mit</li>
+      <li>Interceptor schon mit dabei
+        <ul>
+          <li>Ließt Cookie <code>XSRF-TOKEN</code></li>
+          <li>Sendet Header <code>X-XSRF-TOKEN</code></li>
+          <li>Namen konfigurierbar</li>
+        </ul>
+      </li>
     </ul>
 
     <ul>
       <li>Problem: <i>Öffne Link in neuem Tab</i></li>
-      <li>Server vergibt neues Token wenn gleiche IP</li>
+      <li>Lösung: Server sendet Token noch mal bei <i>GET api/login</i></li>
     </ul>
 
   </div>

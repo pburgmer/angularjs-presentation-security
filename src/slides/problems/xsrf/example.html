@@ -5,12 +5,20 @@
 
   <div w11k-slide-part-source="content">
 
+    <ul>
+      <li>Ausgangsituation: Benutzer in App eingeloggt (hat gültiges Session-Cookie)</li>
+    </ul>
+
 <pre w11k-pretty-print lang="url" title="Aufruf von Business Logik ohne zusätzlichen Schutz">
 http://example.com/app/transferFunds?amount=1500&destinationAccount=4673243243
 </pre>
 
+<pre w11k-pretty-print lang="html" title="XSRF Attacke per Social Engeneering">
+<a href="http://bit.ly/xyz">Link zu einer &quot;vertrauenswürdigen&quot; Seite</a>
+</pre>
+
 <pre w11k-pretty-print lang="html" title="XSRF Attacke per XSS">
-&lt;img src=&quot;http://example.com/app/transferFunds?amount=1500&amp;destinationAccount=attackersAcct#&quot; width=&quot;0&quot; height=&quot;0&quot; /&gt;
+&lt;img src=&quot;http://example.com/app/transferFunds?amount=1500&amp;destination=attacker&quot; /&gt;
 </pre>
 
   </div>

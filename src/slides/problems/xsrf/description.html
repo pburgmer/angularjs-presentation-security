@@ -1,11 +1,12 @@
 <div w11k-slide-master="regular">
   <span w11k-slide-part-source="header">
-    Cross-Site Request Forgery
+    XSRF
   </span>
 
   <div w11k-slide-part-source="content">
     <ul>
-      <li>Angreifer ruft URL mit den Rechten des Benutzers auf</li>
+      <li>Angreifer bringt Benutzer dazu URL aufzurufen</li>
+      <li>Request wird mit Rechten des Benutzers ausgeführt</li>
       <li>Verschiedene Angriffsformen
         <ul>
           <li>Cross-Site-Scripting</li>
@@ -15,9 +16,14 @@
     </ul>
 
     <ul>
-      <li>Cookies sind nicht sicher!</li>
-      <li>Auch nicht mit <code>httpOnly</code> und <code>secure</code></li>
-      <li>Cookies können abgegriffen werden bzw. werden automatisch gesendet</li>
+      <li>Cookies allein sind nicht sicher
+        <ul>
+          <li>Für Session-Cookie immer <code>httpOnly</code> und <code>secure</code> verwenden</li>
+          <li>Cookie kann nicht abgegriffen werden (per JS)</li>
+          <li>Cookie wird aber immer gesendet (XSRF immer noch möglich)</li>
+        </ul>
+      </li>
+      <li>Zusätzlicher Schutz notwendig</li>
     </ul>
 
   </div>
