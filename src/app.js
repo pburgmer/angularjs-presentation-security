@@ -19,9 +19,10 @@ angular.module('app').config (function (slidesConfig) {
 
     'concept/overview',
     'concept/login',
+    'concept/out-of-app',
+    'concept/in-app',
     'concept/user-roles',
-    'concept/user-roles-resolve',
-    'concept/user-roles-service',
+    'concept/user-roles-state',
 
     'problems/top10',
     'problems/owasp',
