@@ -7,14 +7,17 @@
     <ul>
       <li>Spezielle Art der HTML Injection</li>
       <li>HTML-Injection wird ausgenutzt um anderen Benutzer Code unterzuschieben</li>
-      <li>Verschiedene Type: Persistent / Non-Persistent, DOM-Based</li>
-      <li>Benutzereingabe wird in HTML ausgegeben</li>
+      <li>Benutzereingabe wird ohne Prüfung in HTML ausgegeben</li>
       <li>Ermöglicht Ausführen von Code</li>
     </ul>
 
     <ul>
-      <li>Code-Ausführung übermittelt Daten an Angreifen (z.B. Cookies)</li>
-      <li>Code ruft URL auf um Aktion mit Rechten des Benutzers auszuführen</li>
+      <li>Angriffe
+        <ul>
+          <li>Daten auslesen und an Angreifen übermitteln (z.B. Session-Cookie)</li>
+          <li>Code ruft URL auf um Aktion mit Rechten des Benutzers auszuführen (ähnlich wie XSRF)</li>
+        </ul>
+      </li>
     </ul>
 
   </div>

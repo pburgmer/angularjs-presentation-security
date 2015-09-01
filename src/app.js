@@ -48,6 +48,8 @@ angular.module('app').config (function (slidesConfig) {
     'problems/xss/defenses',
     'problems/xss/angularjs',
     'problems/xss/angularjs-example',
+    'problems/xss/ng-bind-html',
+    'problems/xss/sce',
 
     'problems/xsrf/title',
     'problems/xsrf/example',
