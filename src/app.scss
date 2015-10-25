@@ -115,6 +115,15 @@ pre.prettyprint.linenums ol.linenums>li {
 
 }
 
+.slides .slide ul {
+  li.advantage:before {
+    content: '+'
+  }
+  li.disadvantage:before {
+    content: '–'
+  }
+}
+
 .slide.title {
   .logo img {
     margin: 0 auto 0.5em;
