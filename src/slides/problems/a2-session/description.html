@@ -9,13 +9,16 @@
     </ul>
 
     <ul>
-      <li>Session kann geklaut werden<br/>
-        z.B. Session-ID in der URL, oft bei URL Rewriting
+      <li>Session kann geklaut werden
+        <ul>
+          <li>Session-ID in der URL (URL Rewriting, Cookies deaktiviert)</li>
+          <li>Cross-Site-Scripting</li>
+        </ul>
+
       </li>
       <li>Kein Session-Timeout (öffentlicher PC)</li>
       <li>Vorhersagbare Session IDs</li>
       <li>Übertragung per unverschlüsselter Kommunikation</li>
-      <li>Cross-Site-Scripting um Cookie zu entwenden</li>
     </ul>
 
   </div>

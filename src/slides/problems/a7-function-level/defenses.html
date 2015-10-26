@@ -1,0 +1,25 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Gegenmaßnahmen
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul>
+      <li>Berechtigungen über Rollen/Gruppen verwalten</li>
+      <li>Berechtigungen an allen relevanten Stellen prüfen</li>
+      <li>Im Client
+        <ul>
+          <li>Im UI nicht anzeigen was der User eh nicht Ausführen darf</li>
+          <li>Manuelle Ausführung verhindern</li>
+        </ul>
+      </li>
+      <li>Im Server
+        <ul>
+          <li>Requests vom Client nicht vertrauen</li>
+          <li>An jedem REST Endpoint</li>
+          <li>Eventuell pro Verb (jeder darf Lesen, nur Admin darf Schreiben)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

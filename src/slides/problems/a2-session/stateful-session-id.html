@@ -10,19 +10,21 @@
         <ul>
           <li>User-ID</li>
           <li>Login-Timestamp</li>
-          <li>XSRF-Token?</li>
-          <li>Base64 encoded</li>
         </ul>
       </li>
       <li>Session-ID wird gegen Manipulation und Nachahmung geschützt
         <ul>
-          <li>Verschlüsselung</li>
-          <li>Signierung</li>
-          <li>Message Authentication Code (z.B. HMAC)</li>
+          <li>Verschlüsselung oder Message Authentication Code (z.B. HMAC)</li>
           <li>Nur auf dem Server bekannt</li>
         </ul>
       </li>
-
+      <li>Anfällig gegen Replay-Attacken
+        <ul>
+          <li>Server kennt keinen echten Logout</li>
+          <li>Session-ID entwendet -&gt; weiter Requests möglich</li>
+          <li>Schwierig zu beheben (Request-Tokens)</li>
+        </ul>
+      </li>
     </ul>
 
   </div>

@@ -1,0 +1,23 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Content Security Policy<br>
+    <small>AngularJS</small>
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+    <ul>
+      <li>Attribut bei ngApp
+<pre w11k-pretty-print lang="html">
+&lt;html ng-app=&quot;app&quot; ng-csp&gt;&lt;/html&gt;
+</pre>
+      </li>
+      <li>AngularJS verwendet kann kein <code>new Function</code> mehr</li>
+      <li>Langsamer, aber sicherer</li>
+      <li>AngularJS kann kein CSS mehr in Seite injizieren<br>
+        -&gt; <code>angular-csp.css</code> einbinden
+      </li>
+    </ul>
+
+  </div>
+</div>
