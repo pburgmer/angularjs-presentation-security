@@ -35,6 +35,8 @@ angular.module('app').config (function (slidesConfig) {
     'problems/a1-injection/angularjs-example',
     'problems/a1-injection/ng-bind-html',
     'problems/a1-injection/sce',
+    'problems/a1-injection/angular-interpolate',
+    'problems/a1-injection/angular-ng-init',
 
     'problems/a2-session/title',
     'problems/a2-session/description',

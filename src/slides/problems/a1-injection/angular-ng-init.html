@@ -1,0 +1,37 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    AngularJS<br/>
+    <small><code class="pre">$interpolate</code></small>
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+
+<pre w11k-pretty-print lang="html">
+&lt;div ng-init=&quot;text_1 = {{ text_2 = 1}}&quot;&gt;
+  &lt;input type=&quot;text&quot; ng-model=&quot;text_1&quot;/&gt;&lt;span ng-bind=&quot;text_1&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;input type=&quot;text&quot; ng-model=&quot;text_2&quot;/&gt;&lt;span ng-bind=&quot;text_2&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+    <div style="margin: 1em 0">
+      <div ng-init="text_1 = {{ text_2 = 1}}">
+        <input type="text" ng-model="text_1"/>
+        <span ng-bind="text_1"></span>
+      </div>
+      <div>
+        <input type="text" ng-model="text_2"/>
+        <span ng-bind="text_2"></span>
+      </div>
+    </div>
+
+    <ul>
+      <li>Daten vom Server, die durch <code>$interpolate</code> laufen, müssen escaped werden</li>
+      <li>Soll der Server wirklich etwas über die Verwendung im Frontend wissen?</li>
+      <li>Kann auch im Client per HTTP-Interceptor gemacht werden</li>
+    </ul>
+
+  </div>
+</div>
