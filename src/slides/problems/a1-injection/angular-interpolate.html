@@ -1,0 +1,47 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    AngularJS<br/>
+    <small><code class="pre">$interpolate</code></small>
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+    <blockquote cite="http://angularjs.org" style="font-size: 1em">
+      <p>
+        For security purposes, it is strongly encouraged that web servers escape
+        user-supplied data, replacing angle brackets (&lt;, &gt;) with &amp;lt; and &amp;gt;
+        respectively, and replacing all interpolation start/end markers with
+        their escaped counterparts.
+      </p>
+      <p><cite>$interpolate API Documentation at angularjs.org</cite></p>
+    </blockquote>
+
+<pre w11k-pretty-print lang="html">
+&lt;div&gt;
+  &lt;input type=&quot;text&quot; ng-model=&quot;text_1&quot;/&gt;&lt;span ng-bind=&quot;text_1&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;input type=&quot;text&quot; ng-model=&quot;text_2&quot;/&gt;&lt;span ng-bind=&quot;text_2&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+    <div style="margin-top: 1em">
+      <div>
+        <input type="text" ng-model="text_1"/>
+        <span ng-bind="text_1"></span>
+      </div>
+      <div>
+        <input type="text" ng-model="text_2"/>
+        <span ng-bind="text_2"></span>
+      </div>
+    </div>
+
+<pre w11k-pretty-print lang="html">
+&lt;div ng-init=&quot;text_3={{ text_2 = 1}}&quot;&gt;
+  &lt;input type=&quot;text&quot; ng-model=&quot;text_3&quot;/&gt;
+  &lt;span ng-bind=&quot;text_3&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+  </div>
+</div>
