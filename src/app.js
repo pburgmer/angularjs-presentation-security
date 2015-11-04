@@ -19,18 +19,18 @@ angular.module('app').config (function (slidesConfig) {
     'situation/concept',
     'situation/defenses',
     'situation/defenses-headers',
-    'situation/insufficient-defenses',
-
 
     'problems/top10',
     'problems/owasp',
 
     'problems/a1-injection/title',
     'problems/a1-injection/example-sql',
+    'problems/a1-injection/example-html',
     'problems/a1-injection/description',
     'problems/a1-injection/test',
     'problems/a1-injection/defenses',
-    'problems/a1-injection/example-sql-prepared-statement',
+    'problems/a1-injection/defense-sql-prepared-statement',
+    'problems/a1-injection/defense-html',
     'problems/a1-injection/angularjs',
     'problems/a1-injection/angularjs-example',
     'problems/a1-injection/ng-bind-html',
@@ -60,7 +60,9 @@ angular.module('app').config (function (slidesConfig) {
     'problems/a7-function-level/description',
     'problems/a7-function-level/defenses',
     'problems/a7-function-level/user-roles',
-    'problems/a7-function-level/user-roles-state',
+    'problems/a7-function-level/user-roles-state-data',
+    'problems/a7-function-level/user-roles-state-event',
+    'problems/a7-function-level/user-roles-state-resolve',
 
     'problems/a8-xsrf/title',
     'problems/a8-xsrf/example',

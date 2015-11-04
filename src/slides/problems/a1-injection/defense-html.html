@@ -1,0 +1,22 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Gegenmaßnahme<br>
+    <small>HTML & DOM</small>
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+<pre w11k-pretty-print lang="js">
+var source = $('#insecure-input');
+var target = $('#insecure-output');
+
+var newChild = $('<p></p>');
+target.append(newChild);
+
+var text = source.val();
+newChild.text(text);
+</pre>
+
+    <a href="assets/examples/html-injection/secure.html" target="_blank">Ausprobieren ...</a>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Berechtigungen<br/>
+    <small>AngularJS</small>
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul>
+      <li>An Route / State per <code>resolve</code></li>
+      <li>Event-Handler für <code>$stateChangeError</code></li>
+    </ul>
+
+<pre w11k-pretty-print lang="js">
+angular.module('app').config(function() {
+  $stateProvider.state('admin', {
+    url: '/admin',
+    templateUrl: 'route/admin/admin.html',
+    resolve: {
+      authorized: /* @ngInject */ function (UserService) {
+        return UserService.hasRoles('ADMIN');
+      }
+    }
+  });
+});
+</pre>
+
+  </div>
+</div>
