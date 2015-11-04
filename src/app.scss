@@ -141,7 +141,9 @@ pre.prettyprint.linenums ol.linenums>li {
 .slides.screen .slide.end {
   @include vcenter;
 
-  a, a[href^="http"], a:visited {
-    text-decoration: none;
+  li {
+    a, a[href^="http"], a:visited {
+      text-decoration: none;
+    }
   }
 }
