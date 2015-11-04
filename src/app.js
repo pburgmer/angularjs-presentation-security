@@ -27,7 +27,6 @@ angular.module('app').config (function (slidesConfig) {
     'problems/a1-injection/example-sql',
     'problems/a1-injection/example-html',
     'problems/a1-injection/description',
-    'problems/a1-injection/test',
     'problems/a1-injection/defenses',
     'problems/a1-injection/defense-sql-prepared-statement',
     'problems/a1-injection/defense-html',
