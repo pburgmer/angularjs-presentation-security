@@ -69,6 +69,12 @@ angular.module('app').config (function (slidesConfig) {
     'problems/a8-xsrf/defenses',
     'problems/a8-xsrf/angularjs',
 
+
+    'problems/a8-xsrf-json/title',
+    'problems/a8-xsrf-json/example',
+    'problems/a8-xsrf-json/description',
+    'problems/a8-xsrf-json/defenses',
+
     'end'
   ];
 
