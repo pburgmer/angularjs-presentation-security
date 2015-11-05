@@ -116,11 +116,13 @@ pre.prettyprint.linenums ol.linenums>li {
 }
 
 .slides .slide ul {
-  li.advantage:before {
-    content: '+'
-  }
-  li.disadvantage:before {
-    content: '–'
+  > li, >li > ul > li {
+    &.advantage:before, {
+      content: '+'
+    }
+    &.disadvantage:before {
+      content: '–'
+    }
   }
 }
 

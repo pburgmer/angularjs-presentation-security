@@ -1,0 +1,29 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    <small>Klassisches</small><br>
+    Session Management
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+    <ul>
+      <li>Ausgangssituation
+        <ul>
+          <li>Anwender loggt sich ein</li>
+          <li>Server vergibt Session ID, überträgt als Cookie</li>
+          <li>Browser sendet Cookie mit Session ID automatisch mit</li>
+          <li>Server mappt Session ID auf User</li>
+        </ul>
+      </li>
+      <li>Probleme
+        <ul>
+          <li>Session kann geklaut werden (ID in URL, XSS)</li>
+          <li>Kein Session-Timeout (öffentlicher PC)</li>
+          <li>Vorhersagbare Session IDs</li>
+          <li>Übertragung per unverschlüsselter Kommunikation (Man-in-the-Middle)</li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+</div>

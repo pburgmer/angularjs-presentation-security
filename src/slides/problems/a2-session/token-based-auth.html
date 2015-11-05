@@ -1,0 +1,28 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Token basierte Authentifizierung
+  </span>
+
+  <div w11k-slide-part-source="content">
+    <ul>
+      <li>Keine Session ID mit Mapping auf User im Server</li>
+      <li>Server vergibt nach Login Token</li>
+      <li>Token enthält alles was Server für Auth-Prüfung braucht
+        <ul>
+          <li>User-ID</li>
+          <li>Login-Timestamp</li>
+          <li>Expires</li>
+          <li>Optional: Rollen</li>
+        </ul>
+      </li>
+      <li>Token ist gegen Manipulation geschützt (JSON Web Token)
+        <ul>
+          <li>Verschlüsselung oder Message Authentication Code (z.B. HMAC)</li>
+          <li>Secret nur auf Server bekannt</li>
+        </ul>
+      </li>
+      <li>Client sendet Token bei jedem Request (Cookie oder Header)</li>
+    </ul>
+
+  </div>
+</div>
