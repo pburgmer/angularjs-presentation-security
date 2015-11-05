@@ -1,0 +1,19 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Cookies <span class="pre">vs</span> HTTP Header<br>
+    <small>HTTP Header</small>
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+    <ul>
+      <li>Kann von App in jedem Request gesetzt werden</li>
+      <li class="advantage">Auch für Cross-Domain-Requests</li>
+      <li class="advantage">Wird nicht automatisch gesendet (kein XSRF)</li>
+      <li class="advantage">Mobile Ready (Native Apps, schlechter Support für Cookies)</li>
+      <li class="disadvantage">Token muss persistiert werden (localStorage, pro Domain)</li>
+      <li class="disadvantage">Anfällig für XSS</li>
+    </ul>
+
+  </div>
+</div>

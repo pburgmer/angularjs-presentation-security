@@ -83,7 +83,7 @@ $w11k-slides-slide-regular-header-logo: url("assets/images/AngularJS-Shield.png"
   }
 
   li.highlight {
-    color: $theCodeCampus_orange;
+    color: $w11k-slides-color-1;
   }
 }
 
@@ -120,11 +120,13 @@ pre.prettyprint.linenums ol.linenums>li {
 }
 
 .slides .slide ul {
-  li.advantage:before {
-    content: '+'
-  }
-  li.disadvantage:before {
-    content: '–'
+  > li, >li > ul > li {
+    &.advantage:before, {
+      content: '+'
+    }
+    &.disadvantage:before {
+      content: '–'
+    }
   }
 }
 
@@ -158,11 +160,12 @@ pre.prettyprint.linenums ol.linenums>li {
   }
 }
 
-.slide.end {
+.slides.screen .slide.end {
   @include vcenter;
 
-  color: $w11k-slides-color-1;
-  a, a:visited {
-    color: $w11k-slides-color-1;
+  li {
+    a, a[href^="http"], a:visited {
+      text-decoration: none;
+    }
   }
 }

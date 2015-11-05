@@ -1,0 +1,22 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Berechtigungen<br/>
+    <small>AngularJS</small>
+  </span>
+
+  <div w11k-slide-part-source="content">
+<pre w11k-pretty-print lang="js">
+module.run(function($rootScope, UserService, growl) {
+  $rootScope.$on('$stateChangeStart', function (event, toState) {
+    if (toState.userRoleRequired) {
+      UserService.hasRoles(toState.userRoleRequired).then(function () {
+        // to late to cancel event
+        event.preventDefault();
+      });
+    }
+  });
+});
+</pre>
+
+  </div>
+</div>

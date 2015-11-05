@@ -5,22 +5,17 @@
   </span>
 
   <div w11k-slide-part-source="content">
-    <ul>
-      <li>An Route / State per <code>resolve</code>
 <pre w11k-pretty-print lang="js">
-angular.module('app').config(function() {
+module.config(function() {
   $stateProvider.state('admin', {
     url: '/admin',
     templateUrl: 'route/admin/admin.html',
-    resolve: {
-      authorized: /* @ngInject */ function (UserService) {
-        return UserService.hasRoles('ADMIN');
-      }
-    }});});
+    data: {
+      userRoleRequired: 'ADMIN'
+    }
+  });
+});
 </pre>
-      </li>
-      <li>Event-Handler für <code>$stateChangeError</code></li>
-    </ul>
 
   </div>
 </div>
