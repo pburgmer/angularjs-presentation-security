@@ -5,7 +5,6 @@ var fabs = require('fabs');
 var path = require('path');
 var lodash = require('lodash');
 var pkg = grunt.file.readJSON('./package.json');
-var pdfexport = require('./build-config/pdf-export.js');
 
 module.exports = function () {
   var configFolder = path.resolve('./build-config');
@@ -38,8 +37,7 @@ module.exports = function () {
   };
   grunt.registerTask('hookPrepareEnd', ['replace:version']);
 
-  var exportConfig = pdfexport.getExportTasksConfig(fabsConfig);
-  var gruntConfig = lodash.merge({}, fabsGruntConfig, additionalConfig, exportConfig);
+  var gruntConfig = lodash.merge({}, fabsGruntConfig, additionalConfig);
 
   grunt.initConfig(gruntConfig);
 };
