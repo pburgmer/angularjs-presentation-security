@@ -12,8 +12,8 @@
 
   "scripts": {
     "postinstall": "bower install",
-    "dev": "grunt dev",
-    "dist": "grunt dist"
+    "start": "grunt dev",
+    "build": "grunt dist"
   },
 
   "dependencies": {},
