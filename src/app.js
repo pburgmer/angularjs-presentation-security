@@ -17,11 +17,14 @@ angular.module('app').config (function (slidesConfig) {
     'situation/architecture',
     'situation/technologies',
     'situation/concept',
+
+    'problems/owasp',
+    'problems/owasp-asvs',
+    'problems/getting-information',
+    'problems/top10',
+
     'situation/defenses',
     'situation/defenses-headers',
-
-    'problems/top10',
-    'problems/owasp',
 
     'problems/a1-injection/title',
     'problems/a1-injection/example-sql',
